@@ -1,6 +1,7 @@
-import { ChakraProvider, ColorModeProvider } from '@chakra-ui/react'
+import { ChakraProvider, ColorModeProvider } from "@chakra-ui/react";
+import { DarkModeSwitch } from "../components/DarkModeSwitch";
 
-import theme from '../theme'
+import theme from "../theme";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -10,10 +11,11 @@ function MyApp({ Component, pageProps }) {
           useSystemColorMode: true,
         }}
       >
+        <DarkModeSwitch />
         <Component {...pageProps} />
       </ColorModeProvider>
     </ChakraProvider>
-  )
+  );
 }
 
-export default MyApp
+export default MyApp;
